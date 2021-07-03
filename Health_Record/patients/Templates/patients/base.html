@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'patients/css/bootstrap.css'%}">
+</head>
+<body>
+    <div>
+        {% include 'patients/navbar.html' %}
+        <div class="mt-5">
+            {% block 'table' %}{% endblock 'table' %}
+        </div>
+    </div>
+    <script src="{% static 'patients/js/jquery.js' %}"></script>
+    <script src="{% static 'patients/js/poper.js' %}"></script>
+    <script src="{% static 'patients/js/bootstrap.js' %}"></script>
+</body>
+</html>
